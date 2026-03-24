@@ -1,0 +1,17 @@
+Options -Indexes
+ServerSignature Off
+
+# Protect sensitive files
+<Files "*.pem">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files "config.php">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# PHP settings
+php_value upload_max_filesize 10M
+php_value post_max_size 10M
